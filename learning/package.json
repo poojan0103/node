@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.1.2"
+    "chalk": "^5.1.2",
+    "colors": "^1.4.0",
+    "fs-extra": "^10.1.0"
   }
 }
