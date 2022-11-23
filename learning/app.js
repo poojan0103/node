@@ -100,3 +100,20 @@ app.get("/employees/:salary",(req,res)=>{
     
     }
     })
+
+    app.get("/employeess/:status",(req,res)=>{
+        try{
+            var status = req.params.status;
+            if(status == false) {
+                throw new Error("employee not found");
+            }else{
+                var employees = search.searchData2(status)
+        
+                res.json(employees)    
+            }
+            
+        }catch(err){
+            res.status(404).send(err.message);
+        
+        }
+        })

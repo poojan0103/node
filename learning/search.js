@@ -33,4 +33,15 @@ function searchData1(salary){
     return employee;
 }
 
-module.exports = {searchData,searchData1}
+function searchData2(status){
+
+    readData();
+
+    employee = employee.filter((emp)=>{
+        return emp.status == status
+    })
+
+    return employee;
+}
+
+module.exports = {searchData,searchData1,searchData2}
