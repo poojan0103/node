@@ -81,7 +81,7 @@ try{
 }
 })
 
-app.get("/employee/:salary",(req,res)=>{
+app.get("/employees/:salary",(req,res)=>{
     try{
     
     
@@ -90,7 +90,7 @@ app.get("/employee/:salary",(req,res)=>{
         if(salary < 20000) {
             throw new Error("employee not found");
         }else{
-            var employees = search.searchData1(age)
+            var employees = search.searchData1(salary)
     
             res.json(employees)    
         }
